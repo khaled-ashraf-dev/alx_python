@@ -22,7 +22,6 @@ class Square:
         Initializes a new Square object with the specified size.
         The size is assigned to the private instance variable __size.
         """
-        try:
-            self.__size = size
-        except TypeError:
+        self.__size = size
+        if not isinstance(self.__size, int):
             raise TypeError('size must be an integer')
