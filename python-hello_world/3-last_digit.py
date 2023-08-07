@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-if not number:
+
+if not number and number != 0:
     print()
+
 last_digit = int(str(number)[-1])
 if number < 0:
     last_digit *= -1
