@@ -28,62 +28,203 @@ from models.base import Base
     Attributes:
         __nb_objects (int): A private class-level attribute to track the number of objects created.
 """
+
 class Rectangle(Base):
     """
+    Represents a base entity.
+
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
         Represents a base entity.
 
-        Attributes:
-            __nb_objects (int): A private class-level attribute to track the number of objects created.
-            Represents a base entity.
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
+        Represents a base entity.
 
-        Attributes:
-            __nb_objects (int): A private class-level attribute to track the number of objects created.
-            Represents a base entity.
-
-        Attributes:
-            __nb_objects (int): A private class-level attribute to track the number of objects created.
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
     """
-    def __init__(self):
-        """
-        Initializes an instance of the Base class.
-
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        Initializes an instance of the Base class.
-
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        Initializes an instance of the Base class.
-
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        Initializes an instance of the Base class.
-
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        """
-        super().__init__()  # Call the constructor of the parent class
-    
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Initializes an instance of the Base class.
+    Represents a base entity.
 
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        Initializes an instance of the Base class.
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
+        Represents a base entity.
 
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        Initializes an instance of the Base class.
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
+        Represents a base entity.
 
-        Args:
-            id (int): An optional identifier to assign to the instance.
-        Initializes an instance of the Base class.
-
-        Args:
-            id (int): An optional identifier to assign to the instance.
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        super().__init__(id)  # Call the super class with id
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+    
+    # Getter and Setter for width
+    @property
+    def width(self):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """        
+        return self.__width
+    
+    @width.setter
+    def width(self, value):
+        """
+    Represents a base entity.
+
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
+        Represents a base entity.
+
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
+        Represents a base entity.
+
+    Attributes:
+        __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+    
+    # Getter and Setter for height
+    @property
+    def height(self):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """
+        return self.__height
+    
+    @height.setter
+    def height(self, value):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+    
+    # Getter and Setter for x
+    @property
+    def x(self):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """
+        return self.__x
+    
+    @x.setter
+    def x(self, value):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """        
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+    
+    # Getter and Setter for y
+    @property
+    def y(self):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """
+        return self.__y
+    
+    @y.setter
+    def y(self, value):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+        """
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
