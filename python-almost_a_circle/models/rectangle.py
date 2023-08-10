@@ -252,4 +252,4 @@ class Rectangle(Base):
                 __nb_objects (int): A private class-level attribute to track the number of objects created.
                 Represents a base entity.
         """
-        return "[Rectangle] ({}) <{}>/<{}> - <{}>/<{}>".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
