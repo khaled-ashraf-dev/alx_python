@@ -232,3 +232,14 @@ class Rectangle(Base):
                 Represents a base entity.
         """
         return self.height * self.width
+    
+    def display(self):
+        """
+        Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+        """
+        for i in range(self.height):
+            print('#' * self.width)
