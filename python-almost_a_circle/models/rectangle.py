@@ -241,8 +241,10 @@ class Rectangle(Base):
                 __nb_objects (int): A private class-level attribute to track the number of objects created.
                 Represents a base entity.
         """
+        for i in range(self.y):
+            print()
         for i in range(self.height):
-            print('#' * self.width)
+            print(' ' * self.x + '#' * self.width)
     
     def __str__(self) -> str:
         """
