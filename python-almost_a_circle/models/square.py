@@ -64,3 +64,26 @@ class Square(Rectangle):
         """
 
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+    
+    @property
+    def size(self):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+        """
+        return self.width
+    
+    @size.setter
+    def size(self, value):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+        """
+        self.width = value
+        self.height = value
