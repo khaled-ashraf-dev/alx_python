@@ -256,7 +256,7 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Represents a base entity.
 
@@ -264,27 +264,40 @@ class Rectangle(Base):
                 __nb_objects (int): A private class-level attribute to track the number of objects created.
                 Represents a base entity.
         """
-        try:
-            self.id = args[0]
-        except:
-            pass
-        
-        try:
-            self.width = args[1]
-        except:
-            pass
+        if args:
+            try:
+                self.id = args[0]
+            except:
+                pass
+            
+            try:
+                self.width = args[1]
+            except:
+                pass
 
-        try:
-            self.height = args[2]
-        except:
-            pass
+            try:
+                self.height = args[2]
+            except:
+                pass
 
-        try:
-            self.x = args[3]
-        except:
-            pass
+            try:
+                self.x = args[3]
+            except:
+                pass
 
-        try:
-            self.y = args[4]
-        except:
-            pass
+            try:
+                self.y = args[4]
+            except:
+                pass
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
+            
