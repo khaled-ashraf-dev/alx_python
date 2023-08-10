@@ -216,12 +216,6 @@ class Rectangle(Base):
                 __nb_objects (int): A private class-level attribute to track the number of objects created.
                 Represents a base entity.
 
-            Attributes:
-                __nb_objects (int): A private class-level attribute to track the number of objects created.
-                Represents a base entity.
-
-            Attributes:
-                __nb_objects (int): A private class-level attribute to track the number of objects created.
         """
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
@@ -237,4 +231,4 @@ class Rectangle(Base):
                 __nb_objects (int): A private class-level attribute to track the number of objects created.
                 Represents a base entity.
         """
-        return self.x * self.y
+        return self.height * self.width
