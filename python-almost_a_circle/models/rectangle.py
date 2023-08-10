@@ -12,7 +12,7 @@
     Attributes:
         __nb_objects (int): A private class-level attribute to track the number of objects created.
 """
-from models.base import Base
+from base import Base
 
 """
     Represents a base entity.

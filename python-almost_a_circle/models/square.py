@@ -44,6 +44,6 @@ class Square(Rectangle):
             __nb_objects (int): A private class-level attribute to track the number of objects created.
     """    
     def __init__(self, size, x=0, y=0, id=None):
-        super().__init__(id, x, y, width, height)  # Call the super class with id
+        super().__init__(size, size, x, y, id)  # Call the super class with id
         self.width = size
         self.height = size
