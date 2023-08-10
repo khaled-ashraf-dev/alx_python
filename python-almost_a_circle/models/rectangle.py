@@ -1,4 +1,4 @@
-from base import Base
+from models.base import Base
 
 """
     Represents a base entity.
