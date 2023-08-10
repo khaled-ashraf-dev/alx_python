@@ -39,11 +39,27 @@ class Rectangle(Base):
 
         Args:
             id (int): An optional identifier to assign to the instance.
+        Initializes an instance of the Base class.
+
+        Args:
+            id (int): An optional identifier to assign to the instance.
+        Initializes an instance of the Base class.
+
+        Args:
+            id (int): An optional identifier to assign to the instance.
         """
         super().__init__()  # Call the constructor of the parent class
     
     def __init__(self, width, height, x=0, y=0, id=None):
         """
+        Initializes an instance of the Base class.
+
+        Args:
+            id (int): An optional identifier to assign to the instance.
+        Initializes an instance of the Base class.
+
+        Args:
+            id (int): An optional identifier to assign to the instance.
         Initializes an instance of the Base class.
 
         Args:
