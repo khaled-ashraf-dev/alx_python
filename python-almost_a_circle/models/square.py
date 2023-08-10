@@ -45,3 +45,5 @@ class Square(Rectangle):
     """    
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(id, x, y, width, height)  # Call the super class with id
+        self.width = size
+        self.height = size
