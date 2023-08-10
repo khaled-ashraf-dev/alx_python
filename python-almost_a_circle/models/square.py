@@ -50,14 +50,17 @@ class Square(Rectangle):
             Attributes:
                 __nb_objects (int): A private class-level attribute to track the number of objects created.
                 Represents a base entity.
-
-            Attributes:
-                __nb_objects (int): A private class-level attribute to track the number of objects created.
-                Represents a base entity.
-
-            Attributes:
-                __nb_objects (int): A private class-level attribute to track the number of objects created.
         """    
         super().__init__(size, size, x, y, id)  # Call the super class with id
         self.width = size
         self.height = size
+    def __str__(self):
+        """
+            Represents a base entity.
+
+            Attributes:
+                __nb_objects (int): A private class-level attribute to track the number of objects created.
+                Represents a base entity.
+        """
+
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
