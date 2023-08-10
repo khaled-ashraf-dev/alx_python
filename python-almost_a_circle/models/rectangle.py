@@ -255,3 +255,11 @@ class Rectangle(Base):
                 Represents a base entity.
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+    
+    def update(self, *args):
+        try:
+            self.id = args[0]
+        except:
+            pass
+
+        
