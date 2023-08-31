@@ -63,7 +63,7 @@ def python(text):
     text = text.replace('_', ' ')
     return f'Python {text}'
 
-@app.route('/number/<int:n>', strict_slashes=False)
+@app.route('/number/<int:n>')
 def show_n(n):
     """
     A route function that responds to the "/number/<n>" URL with a message.
@@ -73,7 +73,7 @@ def show_n(n):
     """
     return f'{n} is a number'
 
-@app.route('/number_template/<int:n>', strict_slashes=False)
+@app.route('/number_template/<int:n>')
 def show_n_template(n):
     """
     A route function that responds to the "/number_template/<n>" URL with a message.
@@ -82,6 +82,8 @@ def show_n_template(n):
         html page if n is int
     """
     return render_template('5-number.html', n=n)
+
+
 
 if __name__ == "__main__":
     # Start the Flask development server
