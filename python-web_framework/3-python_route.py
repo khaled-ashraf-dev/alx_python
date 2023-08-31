@@ -49,7 +49,7 @@ def c(text):
     """
     text = text.replace('_', ' ')
     return f'C {text}'
-
+@app.route('/python', strict_slashes=False, defaults={ 'text': 'is cool' })
 @app.route('/python/<text>', strict_slashes=False)
 def python(text):
     """
@@ -58,8 +58,6 @@ def python(text):
     Returns:
         str: A message "Python <text>".
     """
-    if not text:
-        text = 'is cool'
     text = text.replace('_', ' ')
     return f'Python {text}'
 
