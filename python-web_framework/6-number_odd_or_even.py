@@ -83,6 +83,15 @@ def show_n_template(n):
     """
     return render_template('5-number.html', n=n)
 
+@app.route('/number_odd_or_even/<int:n>')
+def even_or_odd(n):
+    """
+    A route function that responds to the "/number_template/<n>" URL with a message.
+
+    Returns:
+        html page if n is int
+    """
+    return render_template('6-number_odd_or_even.html', n=n)
 
 
 if __name__ == "__main__":
