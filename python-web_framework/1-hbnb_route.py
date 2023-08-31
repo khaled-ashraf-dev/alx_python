@@ -1,9 +1,22 @@
+"""
+Flask Web Application for HBNB
+
+This Flask web application defines two routes to respond to specific URLs.
+The routes provide simple messages as responses, demonstrating basic Flask functionality.
+
+Routes:
+    - "/" : Responds with "Hello HBNB!".
+    - "/hbnb" : Responds with "HBNB".
+
+Usage:
+    Run this script to start the Flask development server. Access the defined
+    routes using a web browser or an HTTP client.
+
+"""
+
 from flask import Flask
 
-# Create a Flask web application instance
 app = Flask(__name__)
-
-# Enable debug mode for the application
 app.config['DEBUG'] = True
 
 @app.route("/", strict_slashes=False)
