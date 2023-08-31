@@ -51,13 +51,15 @@ def c(text):
     return f'C {text}'
 
 @app.route('/python/<text>', strict_slashes=False)
-def python(text='is cool'):
+def python(text):
     """
     A route function that responds to the "/python/<text>" URL with a message.
 
     Returns:
         str: A message "Python <text>".
     """
+    if not text:
+        text = 'is cool'
     text = text.replace('_', ' ')
     return f'Python {text}'
 
